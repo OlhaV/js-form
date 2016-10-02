@@ -28,9 +28,12 @@
 		<div class='b-information'></div>
 </body>
 	<script type="text/javascript" src='scripts/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript" src='scripts/jquery.maskedinput.js'></script>
 	<script type="text/javascript" src='scripts/pattern.js'></script>
 	<script type="text/javascript" src='scripts/form.js'></script>
+	<script type="text/javascript" src='scripts/placeholder.js'></script>
 	<script>
 	var c1 = new Validate('.b-contact-form', '.b-contact-form__input_name', '.b-contact-form__input_email', '.b-contact-form__input_phone', '.b-contact-form__select','.b-contact-form__input_rules', '.b-information');
+	var p1 = new Placeholder('.b-contact-form__input_phone');
 	</script>
 </html>
