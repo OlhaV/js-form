@@ -23,14 +23,16 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 	// change input color depending on the result of test 
 	v.changeColor = function() {
 		if (v.checked) {
+			$(event.target).removeClass('error');
 			$(event.target).addClass('correct');
 		} else {
+			$(event.target).removeClass('correct');
 			$(event.target).addClass('error');
 		}
 	}
  
 	// on input change check if the info is correct 
-	v.name.change(function(){
+	v.name.blur(function(){
 		v.test();
 		v.changeColor();
 		if (v.checked) {
@@ -39,7 +41,7 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 			console.log('v.nameChecked = ' + v.nameChecked);
 	});
 
-	v.phone.change(function(){
+	v.phone.blur(function(){
 		v.test();
 		v.changeColor();
 		if (v.checked) {
@@ -48,24 +50,13 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 			console.log('v.phoneChecked = ' + v.phoneChecked);
 	});
 
-	v.email.change(function(){
+	v.email.blur(function(){
 		v.test();
 		v.changeColor();
 		if (v.checked) {
 			v.emailChecked = true;
 		}
 			console.log('v.emailChecked = ' + v.emailChecked);
-	});
-
-
-
-	// check if checkbox is checked 
-	v.checkbox.change(function(){
-		if (v.checkbox.prop('checked')) {
-			console.log('checkbox is ' + v.checkbox.prop('checked'));
-		} else {
-			console.log('checkbox is ' + v.checkbox.prop('checked'));
-		}
 	});
 
 	v.form.submit(function(e){
