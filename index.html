@@ -25,11 +25,16 @@
 			<input class='b-contact-form__input b-contact-form__input_rules' type='checkbox' required> <br>
 			<input class='b-contact-form__submitBtn' type='submit'>
 		</form>	
+		<div class='b-information'>
+			<p class='b-information__name'></p>
+			<p class='b-information__email'></p>
+			<p class='b-information__phone'></p>
+		</div>
 </body>
 	<script type="text/javascript" src='scripts/jquery-2.1.4.min.js'></script>
 	<script type="text/javascript" src='scripts/pattern.js'></script>
 	<script type="text/javascript" src='scripts/form.js'></script>
 	<script>
-	var c1 = new Validate('.b-contact-form', '.b-contact-form__input_name', '.b-contact-form__input_email', '.b-contact-form__input_phone', '.b-contact-form__input_rules');
+	var c1 = new Validate('.b-contact-form', '.b-contact-form__input_name', '.b-contact-form__input_email', '.b-contact-form__input_phone', '.b-contact-form__select','.b-contact-form__input_rules', '.b-information');
 	</script>
 </html>

@@ -51,6 +51,10 @@ body, html {
     margin-left: 40%;
 }
 
+.b-information {
+    display: none;
+}
+
 .correct {
 	-webkit-box-shadow:0 0 0 50px #33cc33 inset; 
     -webkit-text-fill-color: #333;
@@ -62,4 +66,17 @@ body, html {
 	-webkit-box-shadow:0 0 0 50px #ff0000 inset; 
     -webkit-text-fill-color: #333;
 	background-color: #ff0000 !important; 
+}
+
+.b-information { 
+    background: #c6c6c6;
+    width: 435px;
+    padding: 0px 10px 16px;
+    margin: 30px auto;
+    border: 2px solid #b5b3ab;
+    border-radius: 10px;
+}
+
+.b-information p {
+/*    margin: 10px;*/
 }

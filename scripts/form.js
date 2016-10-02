@@ -1,4 +1,4 @@
-function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
+function Validate(sForm, sName, sEmail, sPhone, sSelect, sCheckbox, showDiv) {
 	var v = this;
 
 	// form and form elements 
@@ -6,7 +6,9 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 	v.name = v.form.find(sName);
 	v.phone = v.form.find(sPhone);
 	v.email = v.form.find(sEmail);
+	v.select = v.form.find(sSelect);
 	v.checkbox = v.form.find(sCheckbox);
+	v.showDiv = $(showDiv);
 
 	// flags 
 	v.checked = false;
@@ -38,7 +40,6 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 		if (v.checked) {
 			v.nameChecked = true;
 		}
-			console.log('v.nameChecked = ' + v.nameChecked);
 	});
 
 	v.phone.blur(function(){
@@ -47,7 +48,6 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 		if (v.checked) {
 			v.phoneChecked = true;
 		}
-			console.log('v.phoneChecked = ' + v.phoneChecked);
 	});
 
 	v.email.blur(function(){
@@ -56,18 +56,21 @@ function Validate(sForm, sName, sEmail, sPhone, sCheckbox) {
 		if (v.checked) {
 			v.emailChecked = true;
 		}
-			console.log('v.emailChecked = ' + v.emailChecked);
 	});
 
 	v.form.submit(function(e){
 		e.preventDefault();
-		if (v.emailChecked && v.nameChecked && v.phoneChecked && v.checkbox.prop('checked')) {
-			console.log('ok!');
-		} else if (!v.checkbox.prop('checked')) {
-			console.log('checkbox not checked');
+		if (v.nameChecked && v.phoneChecked && v.emailChecked && v.checkbox.prop('checked')) {
+			v.showDiv.html('<p>' + v.name.val() + '</p>' + 
+						   '<p>' + v.phone.val() + '</p>' + 
+						   '<p>' + v.email.val() + '</p>' + 
+						   'Количество участников: ' + v.select.val());
+			v.showDiv.css('display', 'block');
+		// } else if (!v.checkbox.prop('checked')) {
+			// alert("please make sure you've studied the rules");
 		}
 		else {
-			alert('please insert the correct info');
+			alert('Please insert the correct info');
 		}
 	});
 }
