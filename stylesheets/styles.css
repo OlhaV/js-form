@@ -1,0 +1,65 @@
+body, html {
+	width: 100%;
+	background: #ededed;
+}
+
+.b-contact-form {
+    background: #c6c6c6;
+    box-shadow: 7px 7px 10px #515151;
+    border: 2px solid #b5b3ab;
+    border-radius: 10px;
+    width: 435px;
+    padding: 10px;
+    margin: 30px auto;
+}
+
+.b-contact-form__input {
+    border-radius: 4px;
+    height: 25px;
+    margin: 5px 0;
+}
+
+.b-contact-form__input_rules {
+	width: 17px;
+}
+
+.b-contact-form__select {
+    margin: 5px 0;
+    height: 20px;
+	border-radius: 4px;
+}
+
+.b-contact-form__label {
+    width: 230px;
+    margin: 5px 0 5px 10px;
+    font-weight: bold;
+    font-family: Arial;
+    float: left;
+    text-align: left;
+}
+
+.b-contact-form__label_rules {
+	margin-top: 8px;
+}
+
+.b-contact-form__submitBtn {
+    float: none;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 40%;
+}
+
+.correct {
+	-webkit-box-shadow:0 0 0 50px #33cc33 inset; 
+    -webkit-text-fill-color: #333;
+    background-color: rgb(51, 204, 51) !important;
+
+}
+
+.error {
+	-webkit-box-shadow:0 0 0 50px #ff0000 inset; 
+    -webkit-text-fill-color: #333;
+	background-color: #ff0000 !important; 
+}

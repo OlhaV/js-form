@@ -1,0 +1,35 @@
+<!doctype>
+<html>
+<head>
+	<meta charset='UTF-8'>	
+	<title>Contact form</title>
+	<link href='stylesheets/styles.css' type='text/css' rel='stylesheet'>
+</head>
+<body>
+		<form class='b-contact-form' action='thankyou.html' method='POST'>
+			<label class='b-contact-form__label'> Фамилия, имя, отчество </label> 
+			<input class='b-contact-form__input b-contact-form__input_name' type='text' placeholder='Enter your name' name='name'> <br>
+			<label class='b-contact-form__label'> Номер телефона </label> 
+			<input class='b-contact-form__input b-contact-form__input_phone' type='text' placeholder='+38(0__)___-__-__' name='phone'> <br>
+			<label class='b-contact-form__label'> Электронная почта </label> 
+			<input class='b-contact-form__input b-contact-form__input_email' type='text' placeholder='Enter your email' name='email'> <br>
+			<label class='b-contact-form__label'> Количество участников</label> 
+			<select class='b-contact-form__select'>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select> <br>
+			<label class='b-contact-form__label b-contact-form__label_rules'>С правилами ознакомлен</label> 
+			<input class='b-contact-form__input b-contact-form__input_rules' type='checkbox' required> <br>
+			<input class='b-contact-form__submitBtn' type='submit'>
+		</form>	
+</body>
+	<script type="text/javascript" src='scripts/jquery-2.1.4.min.js'></script>
+	<script type="text/javascript" src='scripts/pattern.js'></script>
+	<script type="text/javascript" src='scripts/form.js'></script>
+	<script>
+	var c1 = new Validate('.b-contact-form', '.b-contact-form__input_name', '.b-contact-form__input_email', '.b-contact-form__input_phone', '.b-contact-form__input_rules');
+	</script>
+</html>
