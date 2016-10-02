@@ -64,7 +64,7 @@ function Validate(sForm, sName, sEmail, sPhone, sSelect, sCheckbox, showDiv) {
 			v.showDiv.html('<p>' + v.name.val() + '</p>' + 
 						   '<p>' + v.phone.val() + '</p>' + 
 						   '<p>' + v.email.val() + '</p>' + 
-						   'Количество участников: ' + v.select.val());
+						   '<p>Количество участников: ' + v.select.val() + '</p>');
 			v.showDiv.css('display', 'block');
 		// } else if (!v.checkbox.prop('checked')) {
 			// alert("please make sure you've studied the rules");
